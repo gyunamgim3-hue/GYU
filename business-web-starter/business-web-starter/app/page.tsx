@@ -76,53 +76,89 @@ export default function Home() {
         </nav>
       </header>
 
-      <section
-        id="top"
-        style={{
-          minHeight: "100vh",
-          display: "grid",
-          placeItems: "center",
-          textAlign: "center",
-          padding: "140px 24px 80px",
-          boxSizing: "border-box",
-        }}
-      >
-        <div>
-          <p style={eyebrowStyle}>GYU STUDIO</p>
-
-<h1
+<section
+  id="top"
   style={{
-    margin: "26px 0 0",
-    fontSize: "clamp(58px, 10vw, 150px)",
-    lineHeight: "0.95",
-    fontWeight: 400,
-    letterSpacing: "-0.06em",
+    position: "relative",
+    minHeight: "100vh",
+    overflow: "hidden",
+    display: "grid",
+    placeItems: "center",
+    textAlign: "center",
+    padding: "140px 24px 80px",
+    boxSizing: "border-box",
+    backgroundColor: "#111",
   }}
 >
-  Live your flow,
-  <br />
-  Move lightly.
-</h1>
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    preload="metadata"
+    style={{
+      position: "absolute",
+      inset: 0,
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+      objectPosition: "center",
+      zIndex: 0,
+      filter: "brightness(0.72) saturate(0.85)",
+    }}
+  >
+    <source src="/videos/hero-video.mp4" type="video/mp4" />
+  </video>
 
+  <div
+    style={{
+      position: "absolute",
+      inset: 0,
+      backgroundColor: "rgba(0, 0, 0, 0.18)",
+      zIndex: 1,
+    }}
+  />
 
+  <div
+    style={{
+      position: "relative",
+      zIndex: 2,
+      color: "#fff",
+    }}
+  >
+    <p style={{ ...eyebrowStyle, color: "#fff" }}>GYU STUDIO</p>
 
-          <a
-            href="#collection"
-            style={{
-              display: "inline-block",
-              marginTop: "44px",
-              padding: "15px 28px",
-              border: "1px solid #111",
-              color: "#111",
-              textDecoration: "none",
-              fontSize: "12px",
-              letterSpacing: "2px",
-            }}
-          >
-            DISCOVER COLLECTION
-          </a>
-        </div>
-      </section>
+    <h1
+      style={{
+        margin: "26px 0 0",
+        fontSize: "clamp(58px, 10vw, 150px)",
+        lineHeight: "0.95",
+        fontWeight: 400,
+        letterSpacing: "-0.06em",
+      }}
+    >
+      Live your flow,
+      <br />
+      Move lightly.
+    </h1>
+
+    <a
+      href="#collection"
+      style={{
+        display: "inline-block",
+        marginTop: "44px",
+        padding: "15px 28px",
+        border: "1px solid rgba(255,255,255,0.85)",
+        color: "#fff",
+        textDecoration: "none",
+        fontSize: "12px",
+        letterSpacing: "2px",
+      }}
+    >
+      DISCOVER COLLECTION
+    </a>
+  </div>
+</section>
 
       <section
         id="collection"
