@@ -1,73 +1,320 @@
+import Image from "next/image";
 import Link from "next/link";
 
-const surveyUrl = "https://forms.google.com";
+const products = [
+  {
+    number: "001",
+    name: "MINIMAL",
+    image: "/products/option1-front.png",
+    description: "A clean essential designed for everyday freedom.",
+  },
+  {
+    number: "002",
+    name: "POCKET",
+    image: "/products/option2-front.png",
+    description: "A relaxed silhouette with a subtle functional detail.",
+  },
+  {
+    number: "003",
+    name: "CENTER",
+    image: "/products/option3-front.png",
+    description: "A simple graphic expression of the GYU spirit.",
+  },
+];
 
 export default function Home() {
   return (
-    <main>
-      <header className="nav shell">
-        <Link className="brand" href="/">YOUR BRAND</Link>
-        <nav>
-          <a href="#story">Brand</a>
-          <a href="#survey">Survey</a>
-          <Link href="/dashboard">Dashboard</Link>
+    <main style={{ backgroundColor: "#f5f2ea", color: "#111" }}>
+      <header
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100%",
+          zIndex: 20,
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          padding: "24px 40px",
+          boxSizing: "border-box",
+          backgroundColor: "rgba(245, 242, 234, 0.94)",
+          backdropFilter: "blur(10px)",
+        }}
+      >
+<Link href="/" aria-label="GYU home">
+          <Image
+            src="/logo/GYU_logo_master.png"
+            alt="GYU"
+            width={90}
+            height={45}
+            priority
+            style={{
+              width: "72px",
+              height: "auto",
+              display: "block",
+            }}
+          />
+        </Link>
+
+        <nav
+          style={{
+            display: "flex",
+            gap: "28px",
+            fontSize: "12px",
+            letterSpacing: "1.8px",
+          }}
+        >
+          <a href="#collection" style={navLinkStyle}>
+            COLLECTION
+          </a>
+<Link href="/about" style={navLinkStyle}>
+  ABOUT
+</Link>
+          <a href="#contact" style={navLinkStyle}>
+            CONTACT
+          </a>
         </nav>
       </header>
 
-      <section className="hero shell">
-        <div className="eyebrow">DUBAI · EST. 2026</div>
-        <h1>일상에서 벗어나는<br />가장 선명한 방법.</h1>
-        <p className="lead">
-          제품을 출시하기 전, 고객의 목소리부터 듣습니다. 브랜드의 첫 컬렉션과 방향을 함께 만들어주세요.
-        </p>
-        <div className="actions">
-          <a className="button primary" href={surveyUrl} target="_blank" rel="noreferrer">사전 설문 참여</a>
-          <a className="button secondary" href="#story">브랜드 알아보기</a>
-        </div>
-        <div className="hero-card">
-          <span>01</span>
-          <strong>VALIDATE BEFORE LAUNCH</strong>
-          <p>웹사이트 → 고객 설문 → 샘플 검증 → 라이선스 → 판매</p>
-        </div>
-      </section>
-
-      <section id="story" className="section shell grid-two">
+      <section
+        id="top"
+        style={{
+          minHeight: "100vh",
+          display: "grid",
+          placeItems: "center",
+          textAlign: "center",
+          padding: "140px 24px 80px",
+          boxSizing: "border-box",
+        }}
+      >
         <div>
-          <div className="eyebrow">OUR APPROACH</div>
-          <h2>감이 아니라 데이터로<br />브랜드를 시작합니다.</h2>
-        </div>
-        <div className="copy">
-          <p>Instagram에서 브랜드의 감도를 보여주고, 공식 웹사이트에서 신뢰를 만들며, 설문 결과로 실제 수요를 검증합니다.</p>
-          <p>첫 제품은 크게 시작하지 않습니다. 고객이 원하는 디자인·가격·구매 이유를 확인한 뒤 가장 가능성 높은 제품부터 출시합니다.</p>
+          <p style={eyebrowStyle}>GYU STUDIO</p>
+
+<h1
+  style={{
+    margin: "26px 0 0",
+    fontSize: "clamp(58px, 10vw, 150px)",
+    lineHeight: "0.95",
+    fontWeight: 400,
+    letterSpacing: "-0.06em",
+  }}
+>
+  Live your flow,
+  <br />
+  Move lightly.
+</h1>
+
+
+
+          <a
+            href="#collection"
+            style={{
+              display: "inline-block",
+              marginTop: "44px",
+              padding: "15px 28px",
+              border: "1px solid #111",
+              color: "#111",
+              textDecoration: "none",
+              fontSize: "12px",
+              letterSpacing: "2px",
+            }}
+          >
+            DISCOVER COLLECTION
+          </a>
         </div>
       </section>
 
-      <section className="section shell cards">
-        {[
-          ["01", "Discover", "브랜드와 제품 콘셉트 공개"],
-          ["02", "Validate", "설문과 인터뷰로 수요 검증"],
-          ["03", "Launch", "라이선스와 결제 준비 후 판매"],
-        ].map(([n, title, text]) => (
-          <article className="card" key={n}>
-            <span>{n}</span><h3>{title}</h3><p>{text}</p>
-          </article>
-        ))}
-      </section>
+      <section
+        id="collection"
+        style={{
+          padding: "120px 40px",
+          backgroundColor: "#fff",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "1400px",
+            margin: "0 auto",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "end",
+              gap: "30px",
+              marginBottom: "60px",
+              flexWrap: "wrap",
+            }}
+          >
+            <div>
+              <p style={eyebrowStyle}>THE FIRST COLLECTION</p>
+              <h2
+                style={{
+                  margin: "18px 0 0",
+                  fontSize: "clamp(40px, 6vw, 84px)",
+                  lineHeight: 1,
+                  fontWeight: 400,
+                  letterSpacing: "-0.04em",
+                }}
+              >
+                White T-Shirts
+              </h2>
+            </div>
 
-      <section id="survey" className="section shell survey">
-        <div>
-          <div className="eyebrow">EARLY COMMUNITY</div>
-          <h2>첫 고객이 되어주세요.</h2>
-          <p>3분 설문에 참여하면 출시 소식과 초기 구매 혜택을 가장 먼저 받을 수 있습니다.</p>
+            <p
+              style={{
+                maxWidth: "420px",
+                margin: 0,
+                color: "#555",
+                lineHeight: 1.7,
+              }}
+            >
+              everyday essentials
+            </p>
+          </div>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+              gap: "24px",
+            }}
+          >
+            {products.map((product) => (
+<Link
+  href={`/products/${product.number}`}
+  key={product.number}
+  style={{
+    textDecoration: "none",
+    color: "inherit",
+    display: "block",
+  }}
+>
+  <article>
+<div
+  style={{
+    position: "relative",
+    aspectRatio: "1 / 1",
+    backgroundColor: "#f7f6f2",
+    overflow: "hidden",
+  }}
+>
+<Image
+  src={product.image}
+  alt={`GYU ${product.number} ${product.name}`}
+  fill
+  sizes="(max-width: 768px) 100vw, 33vw"
+  style={{
+    objectFit: "contain",
+    padding: "12px",
+  }}
+/>
+</div>
+
+                <div style={{ paddingTop: "22px" }}>
+                  <p
+                    style={{
+                      margin: 0,
+                      fontSize: "12px",
+                      letterSpacing: "2px",
+                    }}
+                  >
+                    {product.number}
+                  </p>
+
+<h3
+  style={{
+    margin: "10px 0 0",
+    fontSize: "24px",
+    fontWeight: 400,
+    letterSpacing: "-0.02em",
+  }}
+>
+                    {product.name}
+                  </h3>
+
+                  <p
+                    style={{
+                      margin: "14px 0 0",
+                      color: "#666",
+                      lineHeight: 1.6,
+                    }}
+                  >
+                    {product.description}
+                  </p>
+                </div>
+              </article>
+              </Link>
+            ))}
+          </div>
         </div>
-        <a className="button light" href={surveyUrl} target="_blank" rel="noreferrer">설문 시작하기 ↗</a>
       </section>
 
-      <footer className="footer shell">
-        <div className="brand">YOUR BRAND</div>
-        <div>Instagram · WhatsApp · Dubai, UAE</div>
-        <div>© 2026 YOUR BRAND</div>
+      <section
+        id="about"
+        style={{
+          padding: "140px 40px",
+          backgroundColor: "#111",
+          color: "#fff",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "1100px",
+            margin: "0 auto",
+          }}
+        >
+          <p style={{ ...eyebrowStyle, color: "#aaa" }}>ABOUT GYU</p>
+
+<h2
+  style={{
+    maxWidth: "900px",
+    margin: "26px 0 0",
+    fontSize: "clamp(42px, 7vw, 96px)",
+    lineHeight: 1.05,
+    fontWeight: 400,
+    letterSpacing: "-0.04em",
+  }}
+>
+  Inspired by nature.
+  <br />
+  Designed for your own pace.
+</h2>
+
+
+        </div>
+      </section>
+
+      <footer
+        id="contact"
+        style={{
+          padding: "44px 40px",
+          display: "flex",
+          justifyContent: "space-between",
+          gap: "24px",
+          flexWrap: "wrap",
+          backgroundColor: "#f5f2ea",
+          fontSize: "12px",
+          letterSpacing: "1.5px",
+        }}
+      >
+        <span>GYU © 2026</span>
+        <a href="#" style={navLinkStyle}>
+          INSTAGRAM
+        </a>
       </footer>
     </main>
   );
 }
+
+const navLinkStyle = {
+  color: "inherit",
+  textDecoration: "none",
+};
+
+const eyebrowStyle = {
+  margin: 0,
+  fontSize: "12px",
+  letterSpacing: "4px",
+};
