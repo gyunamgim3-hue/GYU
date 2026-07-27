@@ -70,11 +70,19 @@ export default function Home() {
 <Link href="/about" style={navLinkStyle}>
   ABOUT
 </Link>
-          <a href="#contact" style={navLinkStyle}>
-            CONTACT
-          </a>
-        </nav>
-      </header>
+
+<a href="#contact" style={navLinkStyle}>
+  CONTACT
+</a>
+
+<a
+  href="https://www.instagram.com/gyu.studio_/"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={navLinkStyle}
+>
+  INSTAGRAM
+</a>
 
 <section
   id="top"
