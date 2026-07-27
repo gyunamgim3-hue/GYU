@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "GYU Studio | Live your flow, Move lightly.",
   description:
     "GYU is a lifestyle brand inspired by nature, the ocean, and freedom.",
+verification: {
+  google: "abxX-OypR4kbbJjEH799xEkudcku_0sFK3_16cNGVpE",
+},
 };
 
 export default function RootLayout({
