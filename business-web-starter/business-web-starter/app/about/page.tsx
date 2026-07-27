@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import SiteHeader from "../components/SiteHeader";
 
 export default function AboutPage() {
   return (
@@ -10,67 +11,7 @@ export default function AboutPage() {
         color: "#111",
       }}
     >
-      <header
-        className="site-header"
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: "100%",
-          zIndex: 20,
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          boxSizing: "border-box",
-          backgroundColor: "rgba(245, 242, 234, 0.94)",
-          backdropFilter: "blur(10px)",
-        }}
-      >
-        <Link href="/" aria-label="GYU home">
-          <Image
-            src="/logo/GYU_logo_master.png"
-            alt="GYU"
-            width={90}
-            height={45}
-            priority
-            style={{
-              width: "72px",
-              height: "auto",
-              display: "block",
-            }}
-          />
-        </Link>
-
-        <nav
-          className="site-nav"
-          style={{
-            display: "flex",
-            fontSize: "12px",
-            letterSpacing: "1.8px",
-          }}
-        >
-          <Link href="/#collection" style={navLinkStyle}>
-            COLLECTION
-          </Link>
-
-          <Link href="/about" style={navLinkStyle}>
-            ABOUT
-          </Link>
-
-          <Link href="/contact" style={navLinkStyle}>
-            CONTACT
-          </Link>
-
-          <a
-            href="https://www.instagram.com/gyu.studio_/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={navLinkStyle}
-          >
-            INSTAGRAM
-          </a>
-        </nav>
-      </header>
+<SiteHeader />
 
       <section
         className="page-section"

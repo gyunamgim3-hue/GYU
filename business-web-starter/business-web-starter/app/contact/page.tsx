@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import SiteHeader from "../components/SiteHeader";
 
 export default function ContactPage() {
   return (
@@ -10,58 +11,7 @@ export default function ContactPage() {
         color: "#111",
       }}
     >
-      <header
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: "100%",
-          zIndex: 20,
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "24px 40px",
-          boxSizing: "border-box",
-          backgroundColor: "rgba(245, 242, 234, 0.94)",
-          backdropFilter: "blur(10px)",
-        }}
-      >
-        <Link href="/" aria-label="GYU home">
-          <Image
-            src="/logo/GYU_logo_master.png"
-            alt="GYU"
-            width={90}
-            height={45}
-            priority
-            style={{
-              width: "72px",
-              height: "auto",
-              display: "block",
-            }}
-          />
-        </Link>
-
-        <nav
-          style={{
-            display: "flex",
-            gap: "28px",
-            fontSize: "12px",
-            letterSpacing: "1.8px",
-          }}
-        >
-          <Link href="/#collection" style={navLinkStyle}>
-            COLLECTION
-          </Link>
-
-          <Link href="/about" style={navLinkStyle}>
-            ABOUT
-          </Link>
-
-          <Link href="/contact" style={navLinkStyle}>
-            CONTACT
-          </Link>
-        </nav>
-      </header>
+<SiteHeader />
 
       <section
         style={{

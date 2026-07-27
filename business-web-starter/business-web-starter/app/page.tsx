@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import SiteHeader from "./components/SiteHeader";
 const products = [
   {
     number: "001",
@@ -24,68 +24,8 @@ const products = [
 
 export default function Home() {
   return (
-    <main style={{ backgroundColor: "#f5f2ea", color: "#111" }}>
-      <header
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: "100%",
-          zIndex: 20,
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "24px 40px",
-          boxSizing: "border-box",
-          backgroundColor: "rgba(245, 242, 234, 0.94)",
-          backdropFilter: "blur(10px)",
-        }}
-      >
-        <Link href="/" aria-label="GYU home">
-          <Image
-            src="/logo/GYU_logo_master.png"
-            alt="GYU"
-            width={90}
-            height={45}
-            priority
-            style={{
-              width: "72px",
-              height: "auto",
-              display: "block",
-            }}
-          />
-        </Link>
-
-        <nav
-          style={{
-            display: "flex",
-            gap: "28px",
-            fontSize: "12px",
-            letterSpacing: "1.8px",
-          }}
-        >
-          <a href="#collection" style={navLinkStyle}>
-            COLLECTION
-          </a>
-
-          <Link href="/about" style={navLinkStyle}>
-            ABOUT
-          </Link>
-
-          <a href="#contact" style={navLinkStyle}>
-            CONTACT
-          </a>
-
-          <a
-            href="https://www.instagram.com/gyu.studio_/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={navLinkStyle}
-          >
-            INSTAGRAM
-          </a>
-        </nav>
-      </header>
+    <main>
+      <SiteHeader />
 
 <section
   id="top"
