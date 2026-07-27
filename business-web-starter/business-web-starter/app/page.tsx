@@ -41,7 +41,7 @@ export default function Home() {
           backdropFilter: "blur(10px)",
         }}
       >
-<Link href="/" aria-label="GYU home">
+        <Link href="/" aria-label="GYU home">
           <Image
             src="/logo/GYU_logo_master.png"
             alt="GYU"
@@ -67,22 +67,25 @@ export default function Home() {
           <a href="#collection" style={navLinkStyle}>
             COLLECTION
           </a>
-<Link href="/about" style={navLinkStyle}>
-  ABOUT
-</Link>
 
-<a href="#contact" style={navLinkStyle}>
-  CONTACT
-</a>
+          <Link href="/about" style={navLinkStyle}>
+            ABOUT
+          </Link>
 
-<a
-  href="https://www.instagram.com/gyu.studio_/"
-  target="_blank"
-  rel="noopener noreferrer"
-  style={navLinkStyle}
->
-  INSTAGRAM
-</a>
+          <a href="#contact" style={navLinkStyle}>
+            CONTACT
+          </a>
+
+          <a
+            href="https://www.instagram.com/gyu.studio_/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={navLinkStyle}
+          >
+            INSTAGRAM
+          </a>
+        </nav>
+      </header>
 
 <section
   id="top"
