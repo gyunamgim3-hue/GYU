@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "YOUR BRAND | Built for the next escape",
+  title: "GYU Studio | Live your flow, Move lightly.",
   description: "Brand introduction, demand survey, and business operations hub.",
 };
 
