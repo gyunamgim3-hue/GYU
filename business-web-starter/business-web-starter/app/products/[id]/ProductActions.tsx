@@ -150,6 +150,27 @@ async function handleSubmit(event: FormEvent<HTMLFormElement>) {
       >
         JOIN THE WAITLIST
       </button>
+      <a
+  href="https://www.instagram.com/gyu.studio_/"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    width: "100%",
+    marginTop: "12px",
+    padding: "17px 20px",
+    border: "1px solid #111",
+    backgroundColor: "transparent",
+    color: "#111",
+    fontSize: "12px",
+    letterSpacing: "2px",
+    cursor: "pointer",
+    textAlign: "center",
+    display: "block",
+    boxSizing: "border-box",
+  }}
+>
+  MESSAGE US ON INSTAGRAM
+</a>
 
       {message && (
         <p
@@ -252,7 +273,7 @@ async function handleSubmit(event: FormEvent<HTMLFormElement>) {
               fontSize: "12px",
               letterSpacing: "2px",
               cursor: isSubmitting ? "not-allowed" : "pointer",
-opacity: isSubmitting ? 0.6 : 1,
+              opacity: isSubmitting ? 0.6 : 1,
             }}
           >
             {isSubmitting ? "SUBMITTING..." : "SUBMIT"}
