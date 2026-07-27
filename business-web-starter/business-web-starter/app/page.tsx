@@ -333,24 +333,102 @@ export default function Home() {
         </div>
       </section>
 
-      <footer
-        id="contact"
+<footer
+  id="contact"
+  style={{
+    backgroundColor: "#111",
+    color: "#fff",
+    padding: "80px 40px",
+  }}
+>
+  <div
+    style={{
+      maxWidth: "1200px",
+      margin: "0 auto",
+      display: "flex",
+      justifyContent: "space-between",
+      gap: "60px",
+      flexWrap: "wrap",
+    }}
+  >
+    <div>
+      <h3
         style={{
-          padding: "44px 40px",
-          display: "flex",
-          justifyContent: "space-between",
-          gap: "24px",
-          flexWrap: "wrap",
-          backgroundColor: "#f5f2ea",
-          fontSize: "12px",
-          letterSpacing: "1.5px",
+          margin: 0,
+          fontSize: "32px",
+          fontWeight: 400,
         }}
       >
-        <span>GYU © 2026</span>
-        <a href="#" style={navLinkStyle}>
-          INSTAGRAM
-        </a>
-      </footer>
+        GYU
+      </h3>
+
+      <p
+        style={{
+          marginTop: "18px",
+          color: "#aaa",
+          lineHeight: 1.8,
+        }}
+      >
+        Live your flow.
+        <br />
+        Move lightly.
+      </p>
+    </div>
+
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "14px",
+      }}
+    >
+      <a
+        href="https://www.instagram.com/gyu.studio_/"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          color: "#fff",
+          textDecoration: "none",
+        }}
+      >
+        Instagram
+      </a>
+
+      <Link
+        href="/about"
+        style={{
+          color: "#fff",
+          textDecoration: "none",
+        }}
+      >
+        About
+      </Link>
+
+      <a
+        href="#contact"
+        style={{
+          color: "#fff",
+          textDecoration: "none",
+        }}
+      >
+        Contact
+      </a>
+    </div>
+  </div>
+
+  <div
+    style={{
+      borderTop: "1px solid rgba(255,255,255,0.12)",
+      marginTop: "60px",
+      paddingTop: "24px",
+      color: "#777",
+      fontSize: "12px",
+      textAlign: "center",
+    }}
+  >
+    © GYU Studio. All rights reserved.
+  </div>
+</footer>
     </main>
   );
 }
