@@ -10,9 +10,9 @@ export default function AboutPage() {
         color: "#111",
       }}
     >
-<header
-  className="site-header"
-  style={{
+      <header
+        className="site-header"
+        style={{
           position: "fixed",
           top: 0,
           left: 0,
@@ -41,9 +41,9 @@ export default function AboutPage() {
           />
         </Link>
 
-<nav
-  className="site-nav"
-  style={{
+        <nav
+          className="site-nav"
+          style={{
             display: "flex",
             fontSize: "12px",
             letterSpacing: "1.8px",
@@ -60,18 +60,27 @@ export default function AboutPage() {
           <Link href="/contact" style={navLinkStyle}>
             CONTACT
           </Link>
+
+          <a
+            href="https://www.instagram.com/gyu.studio_/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={navLinkStyle}
+          >
+            INSTAGRAM
+          </a>
         </nav>
       </header>
 
       <section
-  className="page-section"
-  style={{
-    minHeight: "100vh",
-    display: "flex",
-    alignItems: "center",
-    paddingTop: "140px",
-    paddingBottom: "100px",
-    boxSizing: "border-box",
+        className="page-section"
+        style={{
+          minHeight: "100vh",
+          display: "flex",
+          alignItems: "center",
+          paddingTop: "140px",
+          paddingBottom: "100px",
+          boxSizing: "border-box",
         }}
       >
         <div
@@ -85,39 +94,40 @@ export default function AboutPage() {
             style={{
               display: "flex",
               alignItems: "center",
-              gap: "26px",
+              gap: "22px",
               flexWrap: "wrap",
             }}
           >
-<p
-  style={{
-    margin: 0,
-    fontSize: "18px",
-    fontWeight: 500,
-    letterSpacing: "6px",
-  }}
->
-  ABOUT
-</p>
+            <p
+              style={{
+                margin: 0,
+                fontSize: "14px",
+                fontWeight: 500,
+                letterSpacing: "6px",
+              }}
+            >
+              ABOUT GYU
+            </p>
 
-<Image
-  src="/logo/GYU_logo_master.png"
-  alt="GYU"
-  width={180}
-  height={90}
-  style={{
-    width: "72px",
-    height: "auto",
-  }}
-/>
+            <Image
+              src="/logo/GYU_logo_master.png"
+              alt="GYU"
+              width={180}
+              height={90}
+              style={{
+                width: "72px",
+                height: "auto",
+              }}
+            />
           </div>
 
-<h1
-  className="about-title"
-  style={{
+          <h1
+            className="about-title"
+            style={{
               maxWidth: "950px",
               margin: "36px 0 0",
-              lineHeight: 0.95,
+              fontSize: "clamp(58px, 9vw, 130px)",
+              lineHeight: 0.94,
               fontWeight: 400,
               letterSpacing: "-0.055em",
             }}
@@ -129,31 +139,30 @@ export default function AboutPage() {
 
           <p
             style={{
-              maxWidth: "520px",
+              maxWidth: "580px",
               margin: "64px 0 0",
               fontSize: "18px",
               lineHeight: 1.8,
               color: "#555",
             }}
           >
-            Inspired by the quiet rhythm of nature.
-            <br />
-            Designed for life at your own pace.
+            GYU is a lifestyle brand inspired by nature, the ocean and the
+            freedom to move through life at your own pace.
           </p>
         </div>
       </section>
 
       <section
-  className="page-section"
-  style={{
-    minHeight: "70vh",
-    display: "flex",
-    alignItems: "center",
-    paddingTop: "120px",
-    paddingBottom: "120px",
-    boxSizing: "border-box",
-    backgroundColor: "#111",
-    color: "#fff",
+        className="page-section"
+        style={{
+          minHeight: "80vh",
+          display: "flex",
+          alignItems: "center",
+          paddingTop: "120px",
+          paddingBottom: "120px",
+          boxSizing: "border-box",
+          backgroundColor: "#111",
+          color: "#fff",
         }}
       >
         <div
@@ -171,8 +180,116 @@ export default function AboutPage() {
               color: "#aaa",
             }}
           >
-            OUR DIRECTION
+            OUR PHILOSOPHY
           </p>
+
+          <h2
+            style={{
+              maxWidth: "950px",
+              margin: "32px 0 0",
+              fontSize: "clamp(46px, 7vw, 96px)",
+              lineHeight: 1.02,
+              fontWeight: 400,
+              letterSpacing: "-0.045em",
+            }}
+          >
+            Freedom is not
+            <br />
+            standing still.
+          </h2>
+
+          <p
+            style={{
+              maxWidth: "600px",
+              margin: "56px 0 0",
+              fontSize: "18px",
+              lineHeight: 1.8,
+              color: "#bbb",
+            }}
+          >
+            It is moving naturally, choosing your own direction and finding
+            comfort in simplicity. GYU creates pieces designed to become part
+            of that movement.
+          </p>
+        </div>
+      </section>
+
+      <section
+        className="page-section"
+        style={{
+          minHeight: "75vh",
+          display: "flex",
+          alignItems: "center",
+          paddingTop: "120px",
+          paddingBottom: "120px",
+          boxSizing: "border-box",
+        }}
+      >
+        <div
+          style={{
+            width: "100%",
+            maxWidth: "1100px",
+            margin: "0 auto",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gap: "64px",
+          }}
+        >
+          <div>
+            <p style={sectionLabelStyle}>NATURE</p>
+
+            <h3 style={sectionTitleStyle}>Quiet inspiration.</h3>
+
+            <p style={sectionTextStyle}>
+              We draw from open landscapes, soft sunlight and the calm rhythm
+              of the natural world.
+            </p>
+          </div>
+
+          <div>
+            <p style={sectionLabelStyle}>OCEAN</p>
+
+            <h3 style={sectionTitleStyle}>Always in motion.</h3>
+
+            <p style={sectionTextStyle}>
+              The ocean represents freedom, movement and a life that continues
+              to flow without force.
+            </p>
+          </div>
+
+          <div>
+            <p style={sectionLabelStyle}>SIMPLICITY</p>
+
+            <h3 style={sectionTitleStyle}>Made to feel easy.</h3>
+
+            <p style={sectionTextStyle}>
+              Our pieces are designed with a clean and relaxed approach for
+              everyday life.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="page-section"
+        style={{
+          minHeight: "70vh",
+          display: "flex",
+          alignItems: "center",
+          paddingTop: "120px",
+          paddingBottom: "120px",
+          boxSizing: "border-box",
+          backgroundColor: "#dfe7d5",
+        }}
+      >
+        <div
+          style={{
+            width: "100%",
+            maxWidth: "1100px",
+            margin: "0 auto",
+          }}
+        >
+          <p style={sectionLabelStyle}>OUR DIRECTION</p>
 
           <h2
             style={{
@@ -184,32 +301,70 @@ export default function AboutPage() {
               letterSpacing: "-0.045em",
             }}
           >
-            Inspired by nature.
+            Fewer distractions.
             <br />
-            Made with simplicity.
+            More freedom.
           </h2>
+
+          <Link
+            href="/#collection"
+            style={{
+              display: "inline-block",
+              marginTop: "56px",
+              color: "#111",
+              textDecoration: "none",
+              borderBottom: "1px solid #111",
+              paddingBottom: "5px",
+              fontSize: "13px",
+              letterSpacing: "2px",
+            }}
+          >
+            EXPLORE THE COLLECTION
+          </Link>
         </div>
       </section>
 
       <footer
-  className="page-section"
-  style={{
-    paddingTop: "44px",
-    paddingBottom: "44px",
+        className="page-section"
+        style={{
+          paddingTop: "44px",
+          paddingBottom: "44px",
           display: "flex",
           justifyContent: "space-between",
           gap: "24px",
           flexWrap: "wrap",
-          backgroundColor: "#f5f2ea",
+          backgroundColor: "#111",
+          color: "#fff",
           fontSize: "12px",
           letterSpacing: "1.5px",
         }}
       >
         <span>GYU © 2026</span>
 
-        <a href="#" style={navLinkStyle}>
-          INSTAGRAM
-        </a>
+        <div
+          style={{
+            display: "flex",
+            gap: "24px",
+            flexWrap: "wrap",
+          }}
+        >
+          <Link href="/" style={footerLinkStyle}>
+            HOME
+          </Link>
+
+          <Link href="/contact" style={footerLinkStyle}>
+            CONTACT
+          </Link>
+
+          <a
+            href="https://www.instagram.com/gyu.studio_/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={footerLinkStyle}
+          >
+            INSTAGRAM
+          </a>
+        </div>
       </footer>
     </main>
   );
@@ -217,5 +372,32 @@ export default function AboutPage() {
 
 const navLinkStyle = {
   color: "inherit",
+  textDecoration: "none",
+};
+
+const sectionLabelStyle = {
+  margin: 0,
+  fontSize: "12px",
+  letterSpacing: "4px",
+};
+
+const sectionTitleStyle = {
+  margin: "22px 0 0",
+  fontSize: "32px",
+  lineHeight: 1.15,
+  fontWeight: 400,
+  letterSpacing: "-0.03em",
+};
+
+const sectionTextStyle = {
+  maxWidth: "320px",
+  margin: "24px 0 0",
+  fontSize: "16px",
+  lineHeight: 1.8,
+  color: "#555",
+};
+
+const footerLinkStyle = {
+  color: "#fff",
   textDecoration: "none",
 };
